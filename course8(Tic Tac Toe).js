@@ -70,6 +70,7 @@ const enableBoxes = ()=>{
     for(let box of boxes){
         box.disabled = false; 
         box.innerText="";
+        box.classList.remove("x", "o");
     }
 };
 
@@ -86,8 +87,9 @@ const showWinLine = (pattern) => {
         "1,4,7": { top: "0%", left: "49.5%", width: "100%", rotate: "90deg" },
         "2,5,8": { top: "0%", left: "82.5%", width: "100%", rotate: "90deg" },
         "0,4,8": { top: "0%", left: "0%", width: "141%", rotate: "45deg" },
-        "2,4,6": { top: "0%", left: "0%", width: "141%", rotate: "-45deg" },
+        "2,4,6": { top: "100%", left: "0%", width: "141%", rotate: "-45deg" },
     };
+
 
     const key = pattern.join(",");
     const style = lineStyles[key];
